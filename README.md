@@ -1,3 +1,2 @@
 # 247_018
-A_PPS C_ROUSE 247_018 Kenson8-2_022
-H_KC_T Mi_ss Rienne
+247_018 HKC_T A_PPS COU_RSE Mi_ss Rienne 8-2_022 Kenson-10
