@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf=8">
+<title>Kenson - formelement</title>
+</head>
+<body>
+<form action="/formprocess.php" method="POST">
+<p>
+<label for="username">Name:</label><br>
+<input type="text" value="Your Name" required autofocus>
+</p>
+
+<p>
+<label for="usermail">Email:</label><br>
+<input type="text" value="Your Email" required>
+</p>
+
+<p>
+<label for="comments">Comments:</label><br>
+<textarea rows="5" cols="25" required>Your Comment
+</textarea>
+</p>
+
+<p>
+<label for="favorite">Pick your favorite technology:</label><br>
+<input type="radio" name="favorite" value="html" required>HTML
+<input type="radio" name="favorite" value="css">CSS
+<input type="radio" name="favorite" value="js">JavaScript
+</p>
+
+<p>
+Pick your favorite framework:<br>
+<select>
+<option value="an">ANGULAR</option>
+<option value="re">REACT</option>
+<option value="vu">VUE</option>
+</select>
+</p>
+
+<p>
+Pick your next favorite language:<br>
+<input type="checkbox" name="lang1" value="asp" checked>ASP
+<input type="checkbox" name="lang2" value="java" checked>Java
+<input type="checkbox" name="lang3" value="cc" checked>C
+<input type="checkbox" name="lang4" value="php" checked>PHP
+</p>
+
+<p><input type="submit" value="送出資料"></p>
+</form>
+</body>
+</html>
