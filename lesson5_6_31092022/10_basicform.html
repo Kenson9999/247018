@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf=8">
+<title>Kenson - basicform</title>
+</head>
+<body>
+<form action="/formprocess.php" method="POST">
+<p>
+<label for="username">Name:</label><br>
+<input type="text" id="username" name="username" value="Your Name" required autofocus>
+</p>
+
+<p>
+<label for="usermail">Email:</label><br>
+<input type="text" id="usermail" name="usermail" value="Your Email" required>
+</p>
+
+<p>
+<label for="comments">Comments:</label><br>
+<textarea id="comments" name="comments" rows="5" cols="25" required>Your Comments
+</textarea>
+</p>
+
+<p>
+<label for="favorite">Pick your favorite technology:</label><br>
+<input type="radio" id="html1" name="favorite" value="html" required>
+<label for="html1">
+HTML</label>
+<input type="radio" id="css1" name="favorite" value="css">
+<label for="css1">CSS</label>
+<input type="radio" id="js1" name="favorite" value="js">
+<label for="js1">JavaScript</label>
+</p>
+
+
+
+<p><input type="submit" value="送出資料"></p>
+</form>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf=8">
+<title>Kenson - Contactform</title>
+</head>
+<body>
+<form action="/formprocess.php" method="POST">
+	<h1>Contact us - demo</h1>
+	<fieldset style="width:50%;">
+
+	<legend>Enquiry Information:</legend>
+	<p>
+		<label for="firstname">First name:</label>
+		<input type="text" id="firstname" required>
+	</p>
+
+	<p>
+		<label for="lastname">Last name:</label>
+		<input type="text" id="lastname" required>
+	</p>
+
+	<p>
+		<label for="email">Email:</label>
+		<input type="text" id="email" required>
+	</p>
+
+	<p>
+		<label for="birthday">Birthday:</label>
+		<input type="date" id="birthday" required>
+	</p>
+
+	<p>
+		<label for="gender">Gender:</label>
+		<label for="male">M</label>
+		<input type="radio" id="male" name="gender">
+		<label for="female">F</label>
+		<input type="radio" id="female" name="gender">
+	</p>
+
+	<p>
+		<label for="message">Message:</label><br>
+		<textarea id="message" name="message"rows="10" cols="50" onfocus="this.value=''">Enter text here...</textarea>
+	</p>
+
+	<p>
+		<input type="submit" value="Submit">
+	</p>
+
+	<p>
+		<label for="favspo"><h2>Please pick a favorite sports</h2></label>
+		<input type="checkbox" id="bjj"name="favspo" value="bjj">
+		<label for="bjj">Brazilian Jiu-Jitsu</label><br>
+		<input type="checkbox" id="swimming" name="favspo" value="swimming">
+		<label for="swimming">Swimming</label><br>
+		<input type="checkbox" id="golfing" name="favspo" value="golfing">
+		<label for="golfing">Golfing</label><br>
+		<input type="checkbox" id="others" name="favspo" value="others">
+		<label for="others">Others</label><br>
+	</p>
+	</fieldset>
+	<p>
+		<h2>Our Loaction</h2>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1551.9699550014795!2d114.17159445452407!3d22.307237074596554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x340400ea60caa807%3A0xf860d74803dcdf10!2z5riv5bCI5L2Q5pWm5pWZ5a245Lit5b-D!5e0!3m2!1szh-TW!2shk!4v1661914579515!5m2!1szh-TW!2shk" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+	</p>
+
+</form>
+</body>
+</html>
