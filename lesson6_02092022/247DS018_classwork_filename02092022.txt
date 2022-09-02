@@ -1,0 +1,25 @@
+1) Copy Material at Z://247DS018_RLI/ on your desktop
+2) Create a folder No_02092022_YOURNAME on your desktop
+3) Submit classwork to Z://EXAM/247DS018_RLI
+
+Classwork 02092022
+P91 NO_CSSTEXTBASIC.HTML
+P90 NO_CSSFONTPROERTY.HTML
+P88-89 NO_CSSFONTBASIC.HTML
+10_REVCSSINLINE.HTML
+10_REVCSSINTERNAL.html
+
+=======================
+流動裝置應用程式開發人員證書
+247DS018
+22/8/2022-13/10/2022
+Rienne Li	rienneli@gmail.com
+
+課程習作(45%)，包括︰
+iOS 應用程式習作及匯報
+Android 應用程式習作及匯報
+
+期末考試 (40%)
+筆試︰選擇題及短答題
+
+
