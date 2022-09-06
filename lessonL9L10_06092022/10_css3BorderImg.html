@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Kenson - css3borderimg</title>
+<style>
+#borderimg1 {
+border: 10px solid transparent;
+padding: 15px;
+/*-webkit-border-image: url(border.png) round;
+-o-border-image: url(border.png) round;*/
+border-image: url(border.png) round;
+border-image-slice: 10%;
+border-image-outset: 5px;
+}
+#borderimg2 {
+border: 10px solid transparent;
+padding: 15px;
+/*-webkit-border-image: url(border.png) repeat;
+-o-border-image: url(border.png) repeat;*/
+border-image: url(border.png) repeat;
+border-image-slice: 10%;
+}
+
+#borderimg3 {
+border: 10px solid transparent;
+padding: 15px;
+-webkit-border-image: url(border.png) stretch;
+-o-border-image: url(border.png) stretch;
+/*border-image: url(border.png) stretch;*/
+border-image-slice: 30%;
+border-image-width: 30px;
+}
+
+</style>
+</head>
+<body>
+<h1>The border-image Property:</h1>
+
+<div id="borderimg1">border-image: round;
+border-image-slice:10%;border-image-outset:5px;</div>
+
+<div id="borderimg2">border-image:repeat;
+border-image-slice:20%;</div>
+
+<div id="borderimg3">border-image:stretch;
+border-image-slice:30%;border-image-width:30px;</div>
+
+<h2>Original Image:</h2><img src="border.png" alt="Original image">
+<p><strong>Note:</strong>Internet Explorer 10, and earlier versions,do not support the border-image-slice property.</p>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

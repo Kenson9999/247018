@@ -1,0 +1,30 @@
+#redblock {
+z-index: 1;
+position: absolute;
+width: 80px;
+height: 100px;
+top: 20px;
+left: 20px;
+border: 1px solid #fff;
+background-color: #ff0000;
+}
+#blueblock {
+z-index: 2;
+position: absolute;
+width: 100px;
+height: 80px;
+top: 50px;
+left: 50px;
+border: 1px solid #fff;
+background-color: blue;
+}
+#yellowblock {
+z-index: 3;
+position: absolute;
+width: 50px;
+height: 50px;
+top: 100px;
+left: 100px;
+border: 1px solid #fff;
+background-color: yellow;
+}

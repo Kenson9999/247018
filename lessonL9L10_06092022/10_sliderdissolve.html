@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+<meta charset="utf-8">
+<title>Kenson - sliderdissolve</title>
+<style>
+.slider_container {
+margin: 30px auto;
+width: 400px;
+height: 280px;
+position: relative;
+border:20px solid;
+border-color:#FFF;
+border-bottom-width:100px;
+background-color: #F5F5F5;
+box-shadow:#666 0 0 5px;
+}
+.slider_container div {
+position: absolute;
+top: 20px;
+left: 40px;
+text-align:center;
+opacity:0;
+filter:alpha(opacity=0);
+animation:round 10s linear infinite;
+}
+.slider_container div:nth-child(1) {
+animation-delay: 0s;
+}
+.slider_container div:nth-child(2) {
+animation-delay: 5s;
+}
+.slider_container:hover div {
+animation-play-state: paused;
+border:1px solid;
+}
+
+@keyframes round{
+10% {
+opacity:1;
+}
+50% {
+opacity:1;
+}
+60% {
+opacity:0;
+}
+
+</style>
+</head>
+<body s>
+
+
+<div class="slider_container">
+<div><img src="1.jpg" alt="Slider Image 1">
+<p>&nbsp;</p><p>Image Description 1</p>
+</div>
+<div><img src="2.jpg" alt="Slider Image 2">
+<p>&nbsp;</p><p>Image Descripttion 2</p>
+</div>
+</div>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
