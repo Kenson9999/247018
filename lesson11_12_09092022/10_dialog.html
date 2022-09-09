@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenson - Dialog boxes</title>
+</head>
+
+<body>
+    <script>
+        window.alert("Hello!I am an alert box");
+        var result = prompt("Welcome!", "What is your name?")
+        if (window.result) {
+            window.alert(result + "Thanks for Visiting!");
+            if (window.confirm(result + "Do you really want to leave?")) {
+                window.alert(result + "Thanks for Visiting!");
+            } else {
+                window.alert(result + "Welcome to our place!");
+            }
+        } else {
+            window.alert(result + "//null");//null
+            if (window.confirm(result + "//null")) {//null
+                window.alert(result + "//null");//null
+            } else {
+                window.alert(result + "Welcome to our place!");//null
+            }
+        }
+
+        var name = "Kenson"
+        console.log(result);
+        console.log(result);
+    </script>
+</body>
+
+</html>
