@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenson - gettagname - w3c</title>
+</head>
+<body>
+    <p>
+        First Name:<input name="fname" type="test" value="Michael">
+    </p>
+    <p>
+        First Name:<input name="fname" type="test" value="Tony">
+    </p>
+    <p>Click the button to get the tag name of the first element in the document that has a name attribute with the value "faname".</p>
+    <button onclick="myFunction()">Try it</button>
+    <p id="demo"></p>
+    <script>
+        function myFunction() {
+            var test = "";
+            var x = document.getElementsByName("fname")[0].tagName;
+            var v = document.getElementsByName("fname")[0].value;
+            var v2 = document.getElementsByName("fname")[1].value;
+            var t = document.getElementsByName("fname")[0].type;
+            test+=x+"<br>";
+            test+=t+"<br>";
+            test+=v+"<br>";
+            test+=v2;
+            document.getElementById('demo').innerHTML=test;
+        }
+    </script>
+</body>
+</html>

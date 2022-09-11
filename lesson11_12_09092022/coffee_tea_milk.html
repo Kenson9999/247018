@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenson - getElements - w3c</title>
+</head>
+<body>
+    <p>An unordered list:</p>
+    <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+
+    </ul>
+    <p>Click the button to dis play the innerHTML of the second li element (index 1).</p>
+    <button onclick="myFunction()">Try it</button>
+    <p id="demo"></p>
+    <script>
+        function myFunction() {
+            var x = document.getElementsByTagName("li");
+            document.getElementById('demo').innerHTML = x[2].innerHTML;
+            console.log(x[2]);
+        }
+    </script>
+</body>
+</html>
