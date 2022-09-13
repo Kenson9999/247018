@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenson - arraymethod</title>
+</head>
+<body>
+    <h2>add new array</h2>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+
+    <script>
+        let students = ['Andy','Leon','Hacken','Arron'];
+        students[students.length] = 'Peter';
+        students[5] = 'Kenson';
+        students[5+2] = 'Kenson2';//Andy,Leon,Hacken,Arron,Peter,Kenson,,Kenson2
+        document.getElementById("demo").innerHTML = students;
+        document.getElementById("demo2").innerHTML = students[6];//undefined
+        document.getElementById("demo3").innerHTML = students[5];//Kenson
+        document.getElementById("demo4").innerHTML = students[7];//Kenson2
+    </script>
+</body>
+</html>
