@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenson - mathabsjs</title>
+</head>
+<body>
+    <p>Please input a number to test Math.abs()</p>
+    <input id="demo" type="text">
+    <button type="button" onclick="myFunction()">Test Input</button>
+    <p id="message"></p>
+    <script>
+        function myFunction(){
+            var message, x;
+            message = document.getElementById("message");
+            message.innerHTML = "";
+            x = Math.abs(document.getElementById("demo").value);
+            //x = Math.abs("-1");//1
+            //x = Math.abs(-2);//2
+            //x = Math.abs(null);//0
+            //x = Math.abs("string");//NaN
+            //x = Math.abs();//NaN
+            message.innerHTML = x;
+        }
+    </script>
+    <textarea rows="10" cols="30">
+        //x = Math.abs("-1");//1
+        //x = Math.abs(-2);//2
+        //x = Math.abs(null);//0
+        //x = Math.abs("string");//NaN
+        //x = Math.abs();//NaN
+    </textarea>
+</body>
+</html>

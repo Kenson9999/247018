@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenson - attribute</title>
+</head>
+<body>
+    <button id="click" onclick="chaNge()">CHANGE</button>
+    <img id="image" src="smile_small.jpg" width="160">
+    <img id="image2" src="star.png" width="160">
+    <script>
+            document.getElementById("image").src = "star.png";
+            document.getElementById("image2").src = "smile_small.jpg";
+            function chaNge(){
+                document.getElementById("image").setAttribute("src","smile_small.jpg");
+                document.getElementById("image2").setAttribute("src","star.png");
+                document.getElementById("click").setAttribute("onclick","chaNge2()");
+            }
+            function chaNge2(){
+                document.getElementById("image2").setAttribute("src","smile_small.jpg");
+                document.getElementById("image").setAttribute("src","star.png");
+                document.getElementById("click").setAttribute("onclick","chaNge()");
+            }
+    </script>
+</body>
+</html>

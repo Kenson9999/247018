@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenson - arrapushpop</title>
+</head>
+<body>
+    <p id="domoPush"></p>
+    <p id="domoPop"></p>
+    <script>
+        let students = ['Andy','Leon','Hacken','Arron'];
+        students.push('Peter');
+        document.getElementById("domoPush").innerHTML = students;//Andy,Leon,Hacken,Arron,Peter
+        students.pop();
+        document.getElementById("domoPop").innerHTML = students;//Andy,Leon,Hacken,Arron
+
+    </script>
+</body>
+</html>
