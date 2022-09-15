@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenson - slidedownjq</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#flip").click(function(){
+                $("#panel").slideToggle("slow");//slideUp //slideDown
+            });
+        });
+
+        $(document).ready(function(){
+            $("#flip2").click(function(){
+                $("#panel2").slideDown("slow");//slideUp //slideDown
+            });
+        });
+        $(document).ready(function(){
+            $("#flip3").click(function(){
+                $("#panel3").slideUp("slow");//slideUp //slideDown
+            });
+        });
+    </script>
+    <style>
+        #panel, #flip, #panel2, #flip2, #panel3, #flip3{
+            padding:5px;
+            text-align: center;
+            background-color: #FFAA00;
+            border:solid 1px #c3c3c3;
+        }
+        #panel,#panel2,#panel3{
+            padding:50px;
+            background-color: #FFAACC;
+            /* display:none; */
+        }
+        #panel2{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="flip">Click to slideToggle panel</div><br><br>
+    <div id="panel">Congratulations!</div>
+    <div id="flip2">Click to slide down panel</div><br><br>
+    <div id="panel2">Congratulations!</div>
+    <div id="flip3">Click to slide Up panel</div><br><br>
+    <div id="panel3">Congratulations!</div>
+</body>
+</html>

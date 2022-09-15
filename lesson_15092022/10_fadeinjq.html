@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenson - fadeinjq</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#click").click(function(){
+                $("#div1").fadeIn();//0.4s = 400ms
+                $("#div2").fadeIn("slow");//0.2s = 200ms
+                $("#div3").fadeIn(3000);//3s = 3000ms
+                $("#div1").fadeOut();//0.4s = 400ms
+                $("#div2").fadeOut("slow");//0.2s = 200ms
+                $("#div3").fadeOut(3000);//3s = 3000ms
+                $("#div1").fadeToggle();//0.4s = 400ms
+                $("#div2").fadeToggle("slow");//0.2s = 200ms
+                $("#div3").fadeToggle(3000);//3s = 3000ms
+            });
+        });
+        $(document).ready(function(){
+            $("#click2").click(function(){
+                $("#div1").fadeToggle();//0.4s = 400ms
+                $("#div2").fadeToggle("slow");//0.2s = 200ms
+                $("#div3").fadeToggle(3000);//3s = 3000ms
+            });
+        });
+        $(document).ready(function(){
+            $("#click3").click(function(){
+                $("#div1").fadeTo("slow",0.4);//0.4s = 400ms
+                $("#div2").fadeTo("slow",0.4);//0.2s = 200ms
+                $("#div3").fadeTo(3000,0.4);//3s = 3000ms
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="click">Click to fade in boxes</button><br><br>
+    <button id="click2">Click to adeToggle in boxes</button><br><br>
+    <button id="click3">Click to adeToggle in boxes</button><br><br>
+    <div id="div1" style="width: 80px;height:80px;display:none;background-color: red;"></div><br>
+    <div id="div2" style="width: 80px;height:80px;display:none;background-color: green;"></div><br>
+    <div id="div3" style="width: 80px;height:80px;display:none;background-color: blue;"></div>
+</body>
+</html>
