@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Alert Controller
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-button expand="round" (click)="this.presentAlert()">
+    Standard Alert
+  </ion-button>
+  <ion-button expand="round" (click)="this.presentAlertMultipleButtons()">
+    Confirmation Alert
+  </ion-button>
+  <ion-button expand="block" (click)="this.presentAlertConfirm()">
+    Confirmation Alert
+  </ion-button>
+  <ion-button expand="full" (click)="this.presentAlertRadio()">Radio Alert</ion-button>
+  <ion-button expand="full" (click)="this.presentAlertCheckbox()">Checkbox Alert</ion-button>
+</ion-content>

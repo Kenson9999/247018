@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+<ion-toolbar>
+<ion-title size="small">
+    儲值支付工具紀錄冊
+</ion-title>
+</ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="mainContent" *ngIf="this.JSON_RESULT">
+    
+    <div class="titlelbl">
+      儲值支付工具持牌公司，共有{{this.JSON_RESULT.result.datasize}}間：
+    </div>
+    
+    <ion-list *ngFor="let item of this.JSON_RESULT.result.records">
+    <ion-card padding>
+    <ion-card-content>
+      <ion-label>牌照號碼：{{item.licence_no}}</ion-label><br>
+      <ion-label>公司名稱：{{item.name}}</ion-label><br>
+      <ion-label>公司地址：{{item.local_address}}</ion-label><br>
+      <ion-label>END：{{item.effective_date}}</ion-label>
+    
+    </ion-card-content>      
+    </ion-card>
+    </ion-list>
+  </div>
+</ion-content>
