@@ -10,23 +10,27 @@ if(!empty($_SESSION["email"])){
     $servername="localhost";
     $username="root";
     $dbpassword="";
-    $dbname="demodb";
+    $dbname="";
     try{
         $password = md5($_POST["password"]);
-        $cfmpassword = md5($_POST["ctmpassword"]);
+        $cfmpassword = md5($_POST["cfmpassword"]);
         $address=$_POST["address"];
+        $fullname=$_POST["fullname"];
+        $phone=$_POST["phone"];
         $email=$_SESSION["email"];
 
         $conn = new PDO("mysql:host=$servername;dbname=$dbname;
-        charset = utf8",$username,$dbpassword);
-        $conn->setAttritbute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-        $stmt=$conn->prepare("UPDATE memberinfo SET password=:password,address=:address WHERE email=:email");
-        $stmt->bindParam(':address',$address);
-        $stmt->bindParam(':password',$password);
+        charset=utf8",$username,$dbpassword);
+        $conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+        $stmt=$conn->prepare("UPDATE memberinfo SET password=:password,address=:address,fullname=:fullname,phone=:phone WHERE email=:email");
         $stmt->bindParam(':email',$email);
+        $stmt->bindParam(':password',$password);
+        $stmt->bindParam(':fullname',$fullname);
+        $stmt->bindParam(':phone',$phone);
+        $stmt->bindParam(':address',$address);
         
         if($password==$cfmpassword && $_POST["password"]!="" && $_POST["cfmpassword"]!=""){
-            $stmt->excute();
+            $stmt->execute();
             echo "Member info updated successful";
             
         }else{

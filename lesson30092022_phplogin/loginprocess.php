@@ -3,16 +3,18 @@ if($_POST!=NULL){
     $servername="localhost";
     $username="root";
     $dbpassword="";
-    $dbname="demodb";
+    $dbname="";
 try{
-    $conn=new PDO("mysql:host=$servername;dbname=$dbname;
+    $conn = new PDO("mysql:host=$servername;dbname=$dbname;
     charset=utf8",$username,$dbpassword);
-    $conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTTION);
-    $stmt = $conn->prepare("SELECT email,password FROM memberinfo WHERE email = :email AND password = :password");
+    $conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+    $stmt = $conn->prepare("SELECT email, password FROM memberinfo WHERE email = :email AND password = :password");
+    $stmt->bindParam(':email',$email);
+    $stmt->bindParam(':password',$password);
 
     $email = $_POST["email"];
     $password = md5($_POST["password"]);
-    $stmt->excute();
+    $stmt->execute();
     if($stmt->rowCount()>0){
         $loginCredentials=$stmt->fetch(PDO::FETCH_ASSOC);
         session_start();
@@ -27,7 +29,7 @@ try{
     }
 }
 catch(PDOException $e){
-    echo "Error" . $e->getMessage();
+    echo "Error:" . $e->getMessage();
 }
 $conn=null;
 }else{

@@ -1,21 +1,21 @@
 <?php
 if($_POST!=NULL){
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "demodb";
+    $servername="localhost";
+    $username="root";
+    $dbpassword="";
+    $dbname="";
 try{
     $conn = new PDO("mysql:host=$servername;dbname=$dbname;
-    charset=utf8",$username,$password);
+    charset=utf8",$username,$dbpassword);
     $conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
     $stmt = $conn->prepare("INSERT INTO memberinfo (email,password,fullname,gender,dob,phone,address) VALUES (:email,:password,:fullname,:gender,:dob,:phone,:address)");
     $stmt->bindParam(':email',$email);
-    $stmt->bindParm(':password',$password);
-    $stmt->bindParm(':fullname',$fullname);
-    $stmt->bindParm(':gender',$gender);
-    $stmt->bindParm(':dob',$dob);
-    $stmt->bindParm(':phone',$phone);
-    $stmt->bindParm(':address',$address);
+    $stmt->bindParam(':password',$password);
+    $stmt->bindParam(':fullname',$fullname);
+    $stmt->bindParam(':gender',$gender);
+    $stmt->bindParam(':dob',$dob);
+    $stmt->bindParam(':phone',$phone);
+    $stmt->bindParam(':address',$address);
 
     $email = $_POST["email"];
     $password = md5($_POST["password"]);
